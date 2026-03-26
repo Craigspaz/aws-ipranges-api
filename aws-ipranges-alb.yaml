@@ -62,7 +62,7 @@ Metadata:
       pythonRuntime:
         default: Python 3 runtime version
       cpuArchitecture:
-        default: Instruction set architecture ( )
+        default: Instruction set architecture
 
       albScheme:
         default: Load balancer scheme (internal or internet facing)
@@ -77,7 +77,7 @@ Metadata:
       certificateArn:
         default: "Certificate Arn. Leave blank not to create HTTPS listener"
       securityPolicy:
-        default: "HTTPS listener security policy ( https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies )"
+        default: "HTTPS listener security policy"
       redirectHTTPtoHTTPS:
         default: Redirect HTTP requests to HTTPS
       hstsHeaderValue:
@@ -156,31 +156,43 @@ Parameters:
     Type: String
     Description: https://docs.aws.amazon.com/elasticloadbalancing/latest/application/describe-ssl-policies.html"
     AllowedValues:
-      - ELBSecurityPolicy-TLS13-1-3-FIPS-2023-04
       - ELBSecurityPolicy-TLS13-1-3-2021-06
-      - ELBSecurityPolicy-TLS13-1-2-Res-FIPS-2023-04
-      - ELBSecurityPolicy-TLS13-1-2-Res-2021-06
-      - ELBSecurityPolicy-TLS13-1-2-FIPS-2023-04
-      - ELBSecurityPolicy-TLS13-1-2-Ext2-FIPS-2023-04
-      - ELBSecurityPolicy-TLS13-1-2-Ext2-2021-06
-      - ELBSecurityPolicy-TLS13-1-2-Ext1-FIPS-2023-04
-      - ELBSecurityPolicy-TLS13-1-2-Ext1-2021-06
-      - ELBSecurityPolicy-TLS13-1-2-Ext0-FIPS-2023-04
+      - ELBSecurityPolicy-TLS13-1-3-PQ-2025-09
       - ELBSecurityPolicy-TLS13-1-2-2021-06
-      - ELBSecurityPolicy-TLS13-1-1-FIPS-2023-04
+      - ELBSecurityPolicy-TLS13-1-2-PQ-2025-09
+      - ELBSecurityPolicy-TLS13-1-2-Res-2021-06
+      - ELBSecurityPolicy-TLS13-1-2-Res-PQ-2025-09
+      - ELBSecurityPolicy-TLS13-1-2-Ext2-2021-06
+      - ELBSecurityPolicy-TLS13-1-2-Ext2-PQ-2025-09
+      - ELBSecurityPolicy-TLS13-1-2-Ext1-2021-06
+      - ELBSecurityPolicy-TLS13-1-2-Ext1-PQ-2025-09
       - ELBSecurityPolicy-TLS13-1-1-2021-06
-      - ELBSecurityPolicy-TLS13-1-0-FIPS-2023-04
       - ELBSecurityPolicy-TLS13-1-0-2021-06
+      - ELBSecurityPolicy-TLS13-1-0-PQ-2025-09
       - ELBSecurityPolicy-TLS-1-2-Ext-2018-06
       - ELBSecurityPolicy-TLS-1-2-2017-01
       - ELBSecurityPolicy-TLS-1-1-2017-01
-      - ELBSecurityPolicy-TLS-1-0-2015-04
-      - ELBSecurityPolicy-FS-2018-06
+      - ELBSecurityPolicy-2016-08
       - ELBSecurityPolicy-FS-1-2-Res-2020-10
       - ELBSecurityPolicy-FS-1-2-Res-2019-08
       - ELBSecurityPolicy-FS-1-2-2019-08
       - ELBSecurityPolicy-FS-1-1-2019-08
-      - ELBSecurityPolicy-2016-08
+      - ELBSecurityPolicy-FS-2018-06
+      - ELBSecurityPolicy-TLS13-1-3-FIPS-2023-04
+      - ELBSecurityPolicy-TLS13-1-3-FIPS-PQ-2025-09
+      - ELBSecurityPolicy-TLS13-1-2-FIPS-2023-04
+      - ELBSecurityPolicy-TLS13-1-2-FIPS-PQ-2025-09
+      - ELBSecurityPolicy-TLS13-1-2-Res-FIPS-2023-04
+      - ELBSecurityPolicy-TLS13-1-2-Res-FIPS-PQ-2025-09
+      - ELBSecurityPolicy-TLS13-1-2-Ext2-FIPS-2023-04
+      - ELBSecurityPolicy-TLS13-1-2-Ext2-FIPS-PQ-2025-09
+      - ELBSecurityPolicy-TLS13-1-2-Ext1-FIPS-2023-04
+      - ELBSecurityPolicy-TLS13-1-2-Ext1-FIPS-PQ-2025-09
+      - ELBSecurityPolicy-TLS13-1-2-Ext0-FIPS-2023-04
+      - ELBSecurityPolicy-TLS13-1-2-Ext0-FIPS-PQ-2025-09
+      - ELBSecurityPolicy-TLS13-1-1-FIPS-2023-04
+      - ELBSecurityPolicy-TLS13-1-0-FIPS-2023-04
+      - ELBSecurityPolicy-TLS13-1-0-FIPS-PQ-2025-09
     Default: ELBSecurityPolicy-TLS13-1-2-2021-06
   redirectHTTPtoHTTPS:
     Type: String
